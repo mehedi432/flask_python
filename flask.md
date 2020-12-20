@@ -32,3 +32,17 @@
        mkdir flask_app && cd flask_app && touch application.py
     `
     
+ এখন আমরা একটা সাধারণ web server তৈরী করবো এবং সেখান থেকে একটা html or jinja2 Template serve করবো। 
+ ```py
+ import flask from Flask
+ 
+ app = Flask(__name__)
+ 
+ # এখানে আমরা একটা সাধারণ String সার্ভ করলাম 
+ @app.route("/")
+ def index():
+     return "Hello world!"
+     
+ # আমরা যদি একটা একটা html পেইজকে সার্ভ করতে চাই তাহলে আমাদের এই একই ডিরেক্টরিতে একটা ফোল্ডার তৈরী করতে হবে templates নামের। 
+ ```
+    
